@@ -1,19 +1,7 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 
 import App from "./App";
-import { testerFunction } from "./js-refresher/functionAsValue.js";
-import { mean } from "./js-refresher/functionInsideFunction.js"
-import { arrowFunctionDemo } from "./js-refresher/arrowFunctions.js";
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+import "./index.css";
 
-root.render(
-    <StrictMode>
-        <App />
-    </StrictMode>
-);
-
-testerFunction();
-console.log(mean([3,5,2,6,7],5)); 
-arrowFunctionDemo();
+const entryPoint = document.getElementById("root");
+ReactDOM.createRoot(entryPoint).render(<App />);
