@@ -9,3 +9,5 @@ gen
 .cache
 dist/
 node_modules
+.vscode/
+build/
