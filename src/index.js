@@ -2,9 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "./App";
-import { testerFunction } from "./demo/functionAsValue.js";
-import { mean } from "./demo/functionInsideFunction.js"
-import { arrowFunctionDemo } from "./demo/arrowFunctions.js";
+import { testerFunction } from "./js-refresher/functionAsValue.js";
+import { mean } from "./js-refresher/functionInsideFunction.js"
+import { arrowFunctionDemo } from "./js-refresher/arrowFunctions.js";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
