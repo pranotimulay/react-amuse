@@ -1,5 +1,5 @@
 # React Amuse
-
+:construction:
 Welcome to React Amuse! This playground serves as a playground environment for experimenting with React.js and vanilla JavaScript concepts. Whether you're a beginner learning React or an experienced developer looking to try out new ideas, this repository provides a space for hands-on exploration.
 
 ## About
