@@ -5,6 +5,7 @@ import jsxUi from './assets/jsx-ui.png';
 import stateMgmt from './assets/state-mgmt.png';
 import Header from './components/Header.jsx';
 import CoreConcepts from './components/CoreConcepts.jsx';
+import TabButton from "./components/TabButton";
 
 const reactCourseTypes = ["Fundamental", "Core", "Advanced"];
 
@@ -51,9 +52,24 @@ function App() {
 
                     </ul>
                 </section>
+
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <menu>
+                        <TabButton>Components</TabButton>  {/*React is not aware where to output this value unless configured */}
+
+                    </menu>
+
+                </section>
+
+
             </main>
         </div>
+
+
+
     );
+
 }
 
 export default App;
