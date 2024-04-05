@@ -17,7 +17,7 @@ To get started with this project, follow these steps:
    npm install
 4. **Start the development server:**
    npm start
-5. **Open your browser and visit [http://localhost:1234](http://localhost:1234) to view the application.**
+5. **Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.**
 
 ## Folder Structure
 
