@@ -3,6 +3,8 @@ import componentsImg from './assets/components.png';
 import configImg from './assets/config.png';
 import jsxUi from './assets/jsx-ui.png';
 import stateMgmt from './assets/state-mgmt.png';
+import Header from './components/Header.jsx';
+import CoreConcepts from './components/CoreConcepts.jsx';
 
 const reactCourseTypes = ["Fundamental", "Core", "Advanced"];
 
@@ -33,34 +35,6 @@ const CORE_CONCEPTS = [
     },
 ];
 
-function Header() {
-    const courseTypeRandom = reactCourseTypes[Math.floor(Math.random() * 3)];
-
-    return (
-        <header>
-            <img src={logo} alt="Stylized atom"/>
-            <h1>React Essentials</h1>
-            <p>
-                {courseTypeRandom} React concepts you will need for almost any app you are
-                going to build!
-            </p>
-        </header>
-    );
-
-}
-
-function CoreConcepts(data) {
-    console.log(data);
-
-    return (
-      <li>
-          <img src={data.image} alt="Stylized Component"></img>
-          <h3>{data.title}</h3>
-          <p>{data.description}</p>
-      </li>
-
-    );
-}
 
 function App() {
     return (

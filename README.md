@@ -23,9 +23,10 @@ To get started with this project, follow these steps:
 
 The project follows a standard React folder structure:
 
-- **`App.js`**: Root component of the application.
+- **`App.jsx`**: Root component of the application.
 - **`index.js`**: Entry point of the application.
-- **`index.css`**: Global CSS styles.
+- **`index.css`**: Global CSS styles
+- `components` : Directory that holds all the components needed for the app.
 
 ## Contributing
 
