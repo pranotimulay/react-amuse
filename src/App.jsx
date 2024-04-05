@@ -57,7 +57,9 @@ function App() {
                     <h2>Examples</h2>
                     <menu>
                         <TabButton>Components</TabButton>  {/*React is not aware where to output this value unless configured */}
-
+                        <TabButton>JSX</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton>Props</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton>State</TabButton>  {/*React is not aware where to output this value unless configured */}
                     </menu>
 
                 </section>
