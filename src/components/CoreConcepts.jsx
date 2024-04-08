@@ -10,6 +10,4 @@ export default function CoreConcepts(data) {
         </li>
 
     );
-
-    <!-- end -->
 }
