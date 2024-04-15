@@ -38,6 +38,11 @@ const CORE_CONCEPTS = [
 
 
 function App() {
+
+    function handleSelect() { //alternate convention clickHandler
+        console.log("handleSelect() called!")
+    }
+
     return (
         <div>
             <Header></Header>
@@ -56,11 +61,13 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TabButton>Components</TabButton>  {/*React is not aware where to output this value unless configured */}
-                        <TabButton>JSX</TabButton>  {/*React is not aware where to output this value unless configured */}
-                        <TabButton>Props</TabButton>  {/*React is not aware where to output this value unless configured */}
-                        <TabButton>State</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton onSelect={handleSelect}>Components</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton onSelect={handleSelect}>JSX</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton onSelect={handleSelect}>Props</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton onSelect={handleSelect}>State</TabButton>  {/*React is not aware where to output this value unless configured */}
                     </menu>
+
+
 
                 </section>
 
