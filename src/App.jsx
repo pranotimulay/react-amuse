@@ -6,6 +6,7 @@ import stateMgmt from './assets/state-mgmt.png';
 import Header from './components/Header.jsx';
 import CoreConcepts from './components/CoreConcepts.jsx';
 import TabButton from "./components/TabButton";
+import { useState } from "react";
 
 const reactCourseTypes = ["Fundamental", "Core", "Advanced"];
 
@@ -39,8 +40,11 @@ const CORE_CONCEPTS = [
 
 function App() {
 
+    const [topic, selectedTopic] = useState('please select a topic');
+
     function handleSelect(selectedButton) { //alternate convention clickHandler
         console.log("handleSelect() called! ---> "+ selectedButton);
+        selectedTopic(selectedButton);
     }
 
     return (
@@ -66,10 +70,7 @@ function App() {
                         <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>  {/*React is not aware where to output this value unless configured */}
                         <TabButton onSelect={() => handleSelect('state')}>State</TabButton>  {/*React is not aware where to output this value unless configured */}
                     </menu>
-
-
-
-
+                    {topic}
                 </section>
 
 
