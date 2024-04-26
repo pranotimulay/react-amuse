@@ -7,6 +7,7 @@ import Header from './components/Header.jsx';
 import CoreConcepts from './components/CoreConcepts.jsx';
 import TabButton from "./components/TabButton";
 import { useState } from "react";
+import {EXAMPLES} from "./data";
 
 const reactCourseTypes = ["Fundamental", "Core", "Advanced"];
 
@@ -40,10 +41,10 @@ const CORE_CONCEPTS = [
 
 function App() {
 
-    const [topic, selectedTopic] = useState('please select a topic');
+    const [topic, selectedTopic] = useState('components');
 
     function handleSelect(selectedButton) { //alternate convention clickHandler
-        console.log("handleSelect() called! ---> "+ selectedButton);
+        console.log("handleSelect() called! ---> "+ topic);
         selectedTopic(selectedButton);
     }
 
@@ -71,7 +72,18 @@ function App() {
                         <TabButton onSelect={() => handleSelect('state')}>State</TabButton>  {/*React is not aware where to output this value unless configured */}
                     </menu>
                     {topic}
+
+                    <div id="tab-content"></div>
+                    <h3> {EXAMPLES[topic].title}</h3>
+                    <p> {EXAMPLES[topic].description}</p>
+                    <pre>
+                        <code>
+
+                        </code>
+                    </pre>
+
                 </section>
+
 
 
             </main>
