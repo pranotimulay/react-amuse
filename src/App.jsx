@@ -41,11 +41,10 @@ const CORE_CONCEPTS = [
 
 function App() {
 
-    const [topic, selectedTopic] = useState('components');
+    const [topic, functionToUpdate] = useState(null);
 
     function handleSelect(selectedButton) { //alternate convention clickHandler
-        console.log("handleSelect() called! ---> "+ topic);
-        selectedTopic(selectedButton);
+        functionToUpdate(selectedButton);
     }
 
     return (
@@ -71,16 +70,15 @@ function App() {
                         <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>  {/*React is not aware where to output this value unless configured */}
                         <TabButton onSelect={() => handleSelect('state')}>State</TabButton>  {/*React is not aware where to output this value unless configured */}
                     </menu>
-                    {topic}
 
-                    <div id="tab-content"></div>
-                    <h3> {EXAMPLES[topic].title}</h3>
-                    <p> {EXAMPLES[topic].description}</p>
-                    <pre>
-                        <code>
+                    {!topic && <p> Please select a topic. </p>}
 
-                        </code>
-                    </pre>
+                    {topic && (
+                        <><div id="tab-content"></div><h3> {EXAMPLES[topic].title}</h3><p> {EXAMPLES[topic].description}</p><pre>
+                            <code>{EXAMPLES[topic].code}</code>
+                        </pre></>
+                    )}
+                    
 
                 </section>
 
