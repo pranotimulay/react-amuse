@@ -43,7 +43,10 @@ function App() {
 
     const [topic, functionToUpdate] = useState(null);
 
+    let isButtonSelected = false;
+
     function handleSelect(selectedButton) { //alternate convention clickHandler
+        
         functionToUpdate(selectedButton);
     }
 
@@ -65,10 +68,10 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>  {/*React is not aware where to output this value unless configured */}
-                        <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>  {/*React is not aware where to output this value unless configured */}
-                        <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>  {/*React is not aware where to output this value unless configured */}
-                        <TabButton onSelect={() => handleSelect('state')}>State</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton isSelected={topic === 'components'} onSelect={() => handleSelect('components')}>Components</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton isSelected={topic === 'jsx'} onSelect={() => handleSelect('jsx')}>JSX</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton isSelected={topic === 'props'} onSelect={() => handleSelect('props')}>Props</TabButton>  {/*React is not aware where to output this value unless configured */}
+                        <TabButton isSelected={topic === 'state'} onSelect={() => handleSelect('state')}>State</TabButton>  {/*React is not aware where to output this value unless configured */}
                     </menu>
 
                     {!topic && <p> Please select a topic. </p>}
