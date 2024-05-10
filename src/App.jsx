@@ -3,13 +3,10 @@ import configImg from './assets/config.png';
 import jsxUi from './assets/jsx-ui.png';
 import stateMgmt from './assets/state-mgmt.png';
 import Header from './components/Header.jsx';
-import TabButton from "./components/TabButton";
 import {useState} from "react";
-import {EXAMPLES} from "./data";
 import CoreConceptsSection from "./components/sections/CoreConceptsSection";
 import ExamplesSection from "./components/sections/ExamplesSection";
 
-const reactCourseTypes = ["Fundamental", "Core", "Advanced"];
 
 const CORE_CONCEPTS = [
     {
