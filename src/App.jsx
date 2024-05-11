@@ -8,7 +8,7 @@ function App() {
 
     const [topic, functionToUpdate] = useState(null);
 
-    function handleSelect(selectedButton) { //alternate convention clickHandler
+    function handleSelect(selectedButton) {
         
         functionToUpdate(selectedButton);
     }
